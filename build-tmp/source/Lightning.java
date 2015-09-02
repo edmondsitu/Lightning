@@ -26,13 +26,14 @@ int fillThree = 0;
 
 public void setup()
 {
-  size(500,500);
-  strokeWeight(2);
-  background(0,0,0);
+ 	size(500,500);
+	strokeWeight(2);
+	background(0,0,0);
 }
+
 public void draw()
 {
-	stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+	stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255),255);
 	while(endY < 550)
 	{
 
@@ -43,7 +44,6 @@ public void draw()
 		startY = endY;
 	}
 
-
 	while(cirX < 500)
 	{
 		cirX = cirX + 75;
@@ -51,7 +51,6 @@ public void draw()
 		fill(fillOne, fillTwo, fillThree);
 		ellipse(cirX,15,130,130);
 	}
-
 }
 
 public void mousePressed()
