@@ -3,6 +3,11 @@ int startY = 0;
 int endX = 250;
 int endY = 0;
 int cirX = -90;
+
+int fillOne = 0;
+int fillTwo = 0;
+int fillThree = 0;
+
 void setup()
 {
   size(500,500);
@@ -27,7 +32,7 @@ void draw()
 	{
 		cirX = cirX + 75;
 		noStroke();
-		fill(255,0,0);
+		fill(fillOne, fillTwo, fillThree);
 		ellipse(cirX,15,130,130);
 	}
 
@@ -35,8 +40,11 @@ void draw()
 
 void mousePressed()
 {
-
-	startX = (int)(Math.random()*400+50);
+	cirX = -90;
+	fillOne = (int)(Math.random()*255);
+	fillTwo = (int)(Math.random()*255);
+	fillThree = (int)(Math.random()*255);
+	startX = mouseX;
 	startY = 0;
 	endX = 250;
 	endY = 0;
