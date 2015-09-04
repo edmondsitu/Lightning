@@ -20,7 +20,6 @@ int endX = 250;
 int endY = 0;
 int cirX = -90;
 float thickness = 2;
-
 int fillOne = 0;
 int fillTwo = 0;
 int fillThree = 0;
@@ -28,13 +27,14 @@ int fillThree = 0;
 public void setup()
 {
  	size(500,500);
+ 	frameRate (8);
 }
 
 public void draw()
 {
 	background(0,0,0);
 	strokeWeight(thickness);
-	stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255),255);
+	stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
 	while(endY < 550)
 	{
 
